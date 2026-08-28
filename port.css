@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    height: 65px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+    background: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.intro {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #222;
+}
+
+.hero h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #666;
+    margin: 8px 0 20px;
+}
+
+.hero-content > p {
+    color: #666;
+    max-width: 650px;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.buttons a {
+    background: #222;
+    color: white;
+    text-decoration: none;
+
+    padding: 11px 20px;
+    border-radius: 4px;
+
+    font-size: 14px;
+}
+
+.buttons a:hover {
+    background: #444;
+}
+
+.buttons .outline {
+    background: white;
+    color: #333;
+    border: 1px solid #bbb;
+}
+
+
+/* SECTIONS */
+
+.section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 75px 30px;
+}
+
+.section > h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 35px;
+}
+
+
+/* ABOUT */
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+
+    padding: 30px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.about p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.about p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    padding: 28px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+.position {
+    color: #888 !important;
+    margin-bottom: 12px;
+}
+
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills div {
+    background: white;
+
+    border: 1px solid #ccc;
+
+    padding: 10px 22px;
+
+    border-radius: 4px;
+
+    color: #555;
+}
+
+
+/* PROJECT TAGS */
+
+.tags {
+    margin-top: 18px;
+}
+
+.tags span {
+    display: inline-block;
+
+    border: 1px solid #ccc;
+
+    padding: 5px 10px;
+
+    margin-right: 5px;
+
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contact-details {
+    max-width: 600px;
+    margin: auto;
+
+    background: white;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    text-align: left;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+}
+
+.contact-details p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-details a {
+    color: #555;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: white;
+
+    border-top: 1px solid #ddd;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav {
+        height: auto;
+        padding: 18px 5%;
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 20px;
+    }
+}
