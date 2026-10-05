@@ -1,0 +1,180 @@
+/* Base Layout & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f5f7;
+    color: #2d3748;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Page Container Animation */
+.resume {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Subtle Page Load Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styling & Link Hover Effects */
+header {
+    text-align: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #1a202c;
+}
+
+header p {
+    color: #718096;
+    margin-top: 4px;
+}
+
+.contact, .links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* Links Hover Animation */
+.links a {
+    color: #2b6cb0;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #2b6cb0;
+    transition: width 0.3s ease;
+}
+
+.links a:hover {
+    color: #1a365d;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* Section Headings */
+section {
+    margin-bottom: 25px;
+}
+
+section h2 {
+    font-size: 1.15rem;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Education Layout */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background-color 0.25s ease;
+}
+
+.item:hover {
+    background-color: #f7fafc;
+}
+
+/* Experience & Project Hover Cards */
+.experience, .project {
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-left: 3px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.experience:hover, .project:hover {
+    background-color: #f7fafc;
+    border-left-color: #3182ce;
+    transform: translateX(3px);
+}
+
+.experience h3, .project h3 {
+    font-size: 1.05rem;
+    color: #2d3748;
+}
+
+.role {
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 6px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+/* Interactive Technical Skill Badges */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills span {
+    background-color: #edf2f7;
+    color: #2d3748;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: default;
+    transition: all 0.25s ease;
+}
+
+.skills span:hover {
+    background-color: #3182ce;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(49, 130, 206, 0.3);
+}

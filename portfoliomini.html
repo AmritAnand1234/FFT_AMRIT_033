@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+
+    <style>
+
+        
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            
+            animation: slideDown 1s ease;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+
+           
+            transition: color 0.3s ease;
+        }
+
+      
+
+        nav a:hover {
+            color: #aaa;
+        }
+
+
+      
+
+        .home {
+            text-align: center;
+            padding: 90px 20px;
+            background-color: #e4e4e4;
+
+            
+            animation: fadeUp 1.2s ease;
+        }
+
+        .home h1 {
+            font-size: 42px;
+            margin: 10px;
+        }
+
+        .home p {
+            font-size: 18px;
+        }
+
+
+        
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        section {
+            margin-bottom: 45px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 25px;
+        }
+
+
+       
+
+        .about {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            line-height: 1.6;
+
+            
+            animation: slideLeft 1.2s ease;
+        }
+
+
+        
+
+        .projects {
+
+            
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+       
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+
+            box-shadow: 0 2px 8px #ccc;
+
+            
+
+            animation: fadeUp 1s ease both;
+
+       
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+
+        
+
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+
+
+        
+
+        .card:hover {
+            transform: translateY(-10px);
+
+            box-shadow: 0 8px 18px #aaa;
+        }
+
+        .card h3 {
+            color: #26384a;
+        }
+
+
+       
+
+        .skills {
+
+          
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .skill {
+
+            background-color: #333;
+            color: white;
+
+            padding: 18px;
+
+            text-align: center;
+
+            border-radius: 6px;
+
+            
+
+            animation: fadeUp 1s ease both;
+
+            
+
+            transition:
+                transform 0.3s ease,
+                background-color 0.3s ease;
+        }
+
+
+        
+
+        .skill:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .skill:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .skill:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .skill:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+
+      
+
+        .skill:hover {
+            transform: scale(1.08);
+            background-color: #555;
+        }
+
+
+      
+
+        .contact {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+
+         
+
+            animation: slideLeft 1.2s ease;
+        }
+
+        .contact form {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        .contact input,
+        .contact textarea {
+
+            width: 100%;
+
+            padding: 11px;
+
+            margin-top: 6px;
+
+            border: 1px solid #bbb;
+
+            border-radius: 4px;
+        }
+
+
+        
+
+        .contact button {
+
+            margin-top: 15px;
+
+            padding: 12px 25px;
+
+            border: none;
+
+            background-color: #333;
+
+            color: white;
+
+            cursor: pointer;
+
+         
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        
+
+        .contact button:hover {
+
+            background-color: #555;
+
+            transform: scale(1.05);
+        }
+
+
+        
+
+        footer {
+
+            background-color: #222;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        
+
+        @keyframes slideDown {
+
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+   
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+     
+
+        @keyframes slideLeft {
+
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+
+        
+
+        @media (max-width: 700px) {
+
+            header {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            nav {
+
+                margin-top: 15px;
+            }
+
+
+            nav a {
+
+                display: inline-block;
+
+                margin: 5px;
+            }
+
+
+            .home {
+
+                padding: 60px 15px;
+            }
+
+
+            .home h1 {
+
+                font-size: 32px;
+            }
+
+
+            
+
+            .projects {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            
+
+            .skills {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .container {
+
+                width: 92%;
+            }
+
+        }
+
+
+        
+
+        @media (max-width: 400px) {
+
+            .skills {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    
+
+    <header>
+
+        <h2>My Portfolio</h2>
+
+        <nav>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    
+
+    <div class="home" id="home">
+
+        <h1>
+            Hello, I am AMRIT ANAND
+        </h1>
+
+        <p>
+            Welcome to my personal portfolio.
+        </p>
+
+        <p>
+            I am interested in web development
+            and programming.
+        </p>
+
+    </div>
+
+
+    <div class="container">
+
+
+       
+
+        <section id="about">
+
+            <h2>
+                About Me
+            </h2>
+
+            <div class="about">
+
+                <p>
+                    I am a student interested in
+                    web development and programming.
+                    I enjoy creating simple and
+                    responsive websites.
+                </p>
+
+                <p>
+                    I am currently learning HTML,
+                    CSS, JavaScript and Python.
+                </p>
+
+            </div>
+
+        </section>
+
+
+       
+
+        <section id="projects">
+
+            <h2>
+                My Projects
+            </h2>
+
+
+            <div class="projects">
+
+
+                
+
+                <div class="card">
+
+                    <h3>
+                        College Event Page
+                    </h3>
+
+                    <p>
+                        A responsive college event
+                        webpage created using HTML
+                        and CSS.
+                    </p>
+
+                </div>
+
+
+                
+
+                <div class="card">
+
+                    <h3>
+                        Student Management
+                    </h3>
+
+                    <p>
+                        A simple project for displaying
+                        student information.
+                    </p>
+
+                </div>
+
+
+                
+
+                <div class="card">
+
+                    <h3>
+                        Personal Website
+                    </h3>
+
+                    <p>
+                        A basic personal website
+                        containing information about me.
+                    </p>
+
+                </div>
+
+
+                
+
+                <div class="card">
+
+                    <h3>
+                        Calculator
+                    </h3>
+
+                    <p>
+                        A simple calculator project
+                        for basic calculations.
+                    </p>
+
+                </div>
+
+
+            
+                <div class="card">
+
+                    <h3>
+                        Login Page
+                    </h3>
+
+                    <p>
+                        A simple login page designed
+                        using HTML and CSS.
+                    </p>
+
+                </div>
+
+
+           
+
+                <div class="card">
+
+                    <h3>
+                        Registration Form
+                    </h3>
+
+                    <p>
+                        A student registration form
+                        created using HTML and CSS.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section id="skills">
+
+            <h2>
+                My Skills
+            </h2>
+
+
+            <div class="skills">
+
+                <div class="skill">
+                    HTML
+                </div>
+
+                <div class="skill">
+                    CSS
+                </div>
+
+                <div class="skill">
+                    JavaScript
+                </div>
+
+                <div class="skill">
+                    Python
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+
+        <section id="contact">
+
+            <h2>
+                Contact Me
+            </h2>
+
+
+            <div class="contact">
+
+                <form>
+
+
+                    <label>
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        required>
+
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required>
+
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter subject">
+
+
+                    <label>
+                        Message
+                    </label>
+
+                    <textarea
+                        rows="5"
+                        placeholder="Enter your message">
+                    </textarea>
+
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+   
+
+    <footer>
+
+        <p>
+            © 2026 My Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

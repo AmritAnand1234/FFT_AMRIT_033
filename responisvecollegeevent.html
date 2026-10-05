@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Tech Fest</title>
+    <link rel="stylesheet" href="./collegeeventhandle.css">
+</head>
+
+<body>
+
+    <!-- Responsive Navigation -->
+    <header>
+        <h1>College Tech Fest</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#details">Details</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#speakers">Speakers</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Event Banner -->
+    <section id="home" class="banner">
+        <h2>College Tech Fest 2026</h2>
+        <p>Learn • Create • Innovate</p>
+        <p>15 October 2026 | 9:00 AM - 5:00 PM</p>
+
+        <a href="#register" class="btn">Register Now</a>
+    </section>
+
+
+    <!-- Event Details -->
+    <section id="details" class="section">
+        <h2>Event Details</h2>
+
+        <div class="details-container">
+
+            <div class="detail-box">
+                <h3>Date</h3>
+                <p>15 October 2026</p>
+            </div>
+
+            <div class="detail-box">
+                <h3>Time</h3>
+                <p>9:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="detail-box">
+                <h3>Venue</h3>
+                <p>College Auditorium</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Event Highlights -->
+    <section class="section highlights">
+        <h2>Event Highlights</h2>
+
+        <div class="highlight-container">
+
+            <div class="highlight-box">
+                <h3>Workshops</h3>
+                <p>Learn new technologies from experienced trainers.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Project Expo</h3>
+                <p>Explore innovative student projects and ideas.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Cultural Program</h3>
+                <p>Enjoy music, dance and other cultural activities.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Prize Distribution</h3>
+                <p>Outstanding participants will receive prizes.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Schedule Table -->
+    <section id="schedule" class="section">
+        <h2>Event Schedule</h2>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Venue</th>
+                </tr>
+
+                <tr>
+                    <td>9:00 AM</td>
+                    <td>Inauguration</td>
+                    <td>Auditorium</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>Technical Workshop</td>
+                    <td>Lab 1</td>
+                </tr>
+
+                <tr>
+                    <td>11:30 AM</td>
+                    <td>Project Expo</td>
+                    <td>Main Hall</td>
+                </tr>
+
+                <tr>
+                    <td>1:00 PM</td>
+                    <td>Lunch Break</td>
+                    <td>Cafeteria</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Guest Speaker</td>
+                    <td>Auditorium</td>
+                </tr>
+
+                <tr>
+                    <td>3:30 PM</td>
+                    <td>Cultural Program</td>
+                    <td>Open Stage</td>
+                </tr>
+
+                <tr>
+                    <td>4:30 PM</td>
+                    <td>Prize Distribution</td>
+                    <td>Auditorium</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <!-- Speaker Cards -->
+    <section id="speakers" class="section">
+        <h2>Our Speakers</h2>
+
+        <div class="speaker-container">
+
+            <div class="speaker-card">
+                <div class="speaker-image">A</div>
+                <h3>Arun Kumar</h3>
+                <p>Software Developer</p>
+                <p>Topic: Future of Technology</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-image">P</div>
+                <h3>Priya Sharma</h3>
+                <p>Web Developer</p>
+                <p>Topic: Modern Web Development</p>
+            </div>
+
+            <div class="speaker-card">
+                <div class="speaker-image">R</div>
+                <h3>Rahul Singh</h3>
+                <p>Data Scientist</p>
+                <p>Topic: Introduction to AI</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Registration Form -->
+    <section id="register" class="section registration">
+        <h2>Registration Form</h2>
+
+        <form>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="Enter your department" required>
+
+            <label for="year">Year</label>
+            <select id="year">
+                <option>First Year</option>
+                <option>Second Year</option>
+                <option>Third Year</option>
+                <option>Final Year</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4"
+                placeholder="Enter your message"></textarea>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+
+            <div>
+                <h3>Email</h3>
+                <p>techfest@college.edu</p>
+            </div>
+
+            <div>
+                <h3>Phone</h3>
+                <p>98765 43210</p>
+            </div>
+
+            <div>
+                <h3>Venue</h3>
+                <p>College Auditorium</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 College Tech Fest. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

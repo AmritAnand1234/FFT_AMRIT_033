@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .calculator {
+      width: 320px;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 11px;
+      border: none;
+      border-radius: 6px;
+      background: #222;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    #result {
+      margin-top: 20px;
+      text-align: center;
+      color: #333;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator">
+    <h2>Grade Calculator</h2>
+
+    <input type="number" id="marks" placeholder="Enter your marks">
+    <input type="number" id="total" placeholder="Total marks">
+
+    <button onclick="calculateGrade()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateGrade() {
+      let marks = Number(document.getElementById("marks").value);
+      let total = Number(document.getElementById("total").value);
+
+      if (total <= 0 || marks < 0 || marks > total) {
+        document.getElementById("result").innerHTML =
+          "Please enter valid marks.";
+        return;
+      }
+
+      let percentage = (marks / total) * 100;
+      let grade;
+
+      if (percentage >= 90) {
+        grade = "A+";
+      } else if (percentage >= 80) {
+        grade = "A";
+      } else if (percentage >= 70) {
+        grade = "B";
+      } else if (percentage >= 60) {
+        grade = "C";
+      } else if (percentage >= 50) {
+        grade = "D";
+      } else {
+        grade = "F";
+      }
+
+      document.getElementById("result").innerHTML =
+        `Percentage: ${percentage.toFixed(2)}%<br>
+         Grade: <strong>${grade}</strong>`;
+    }
+  </script>
+
+</body>
+</html>
